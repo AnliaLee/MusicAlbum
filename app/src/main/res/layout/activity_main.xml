@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:background="@color/colorPrimary"
+    tools:context="com.anlia.musicalbum.MainActivity">
+    <com.anlia.musicalbum.view.HatTextView
+        android:id="@+id/text_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:text="来张照片吧..."
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+    <RelativeLayout
+        android:id="@+id/view_album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.anlia.musicalbum.view.MusicButton
+            android:id="@+id/btn_music"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/music"/>
+    </RelativeLayout>
+    <com.anlia.fallingview.FallingView
+        android:id="@+id/fallingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>
